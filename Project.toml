@@ -1,0 +1,9 @@
+name = "EquationDemoLib"
+uuid = "45033271-5bfc-4153-8cec-b22147a7bc88"
+authors = ["Peter <plarochkin@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+ThreadsX = "ac1d9e8a-700a-412c-b207-f0111f4b6c0d"
