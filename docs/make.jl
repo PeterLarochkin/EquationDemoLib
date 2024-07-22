@@ -9,3 +9,6 @@ makedocs(
         pages=[
                 "Home" => "index.md"
         ])
+deploydocs(;
+        repo="github.com/PeterLarochkin/EquationDemoLib.jl",
+)
