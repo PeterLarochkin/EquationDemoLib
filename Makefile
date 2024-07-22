@@ -10,7 +10,7 @@ c_experiment:
 c_omp_experiment:
 	(gcc-14 -fopenmp ./c_analogue/proximity_search_OMP.c -o ./c_analogue/proximity_search_OMP && export OMP_NUM_THREADS=${threads_num} && ./c_analogue/proximity_search_OMP $n $n) > ./docs/results/c_OMP.txt && rm ./c_analogue/proximity_search_OMP
 generate_docs:
-	cd ./docs && julia make.jl && cd - && echo "see file ./docs/build/index.html"
+	cd ./docs && julia -e 'using Pkg; Pkg.instantiate()' && julia -e 'using Pkg; Pkg.add("Documenter")' && julia make.jl && cd - && echo "see file ./docs/build/index.html"
 final:
 	echo "\nJulia single:" && tail -n 1 ./docs/results/julia.txt && \
 	echo "\nJulia parallel:" && tail -n 1 ./docs/results/julia_parallel.txt && \
