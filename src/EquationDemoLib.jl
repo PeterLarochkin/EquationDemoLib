@@ -338,9 +338,9 @@ The function performs the following steps:
 1. Initializes the parameters, matrices, and iteration variables.
 2. Computes the initial matrix `B` using boundary conditions.
 3. Iteratively updates the solution `omega` using the following formula:
-   \$\$ \\omega_{ij}^{(k+1)} = \\omega_{ij}^{(k)} - \\tau_{k+1} r_{ij}^{(k)} \$\$
+   \$\\omega_{ij}^{(k+1)} = \\omega_{ij}^{(k)} - \\tau_{k+1} r_{ij}^{(k)}\$
    where the residual \$r^{(k)}\$ is calculated as \$r^{(k)} = A \\omega^{(k)} - B\$ and the iteration parameter \$\\tau_{k+1}\$ is computed as:
-   \$\$ \\tau_{k+1} = \\frac{[A r^{(k)}, r^{(k)}]}{||A r^{(k)}||_{E}^{2}} \$\$
+   \$\\tau_{k+1} = \\frac{[A r^{(k)}, r^{(k)}]}{||A r^{(k)}||_{E}^{2}}\$
 4. Stops the iteration when the change between successive iterations is less than the specified tolerance \$\\varepsilon\$.
 5. Outputs the number of iterations and the maximum difference between the computed solution and the analytical solution.
 
